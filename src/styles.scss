@@ -1,1 +1,125 @@
-/* You can add global styles to this file, and also import other style files */
+// Colors
+.black {
+  background-color: #000;
+  color: #fff;
+}
+
+.white {
+  background-color: #fff;
+  color: #000;
+}
+
+// Global settings
+img {
+  width: 100%;
+}
+
+.first-block {
+  margin-top: 65px;
+}
+
+.block {
+  margin-bottom: 15px;
+}
+
+// Nav
+.navbar-inverse {
+  background-color: #000 !important;
+  color: #fff;
+  .navbar-brand {
+    color: #fff !important;
+  }
+
+  li.active a {
+    background-color: #222 !important;
+  }
+}
+
+// Components
+.profile {
+  .wrapper {
+    margin-top: 60px;
+    padding: 60px;
+    a {
+      color: #fff;
+    }
+  }
+}
+
+// Make it responsive
+@media screen and (max-width: 991px) {
+  .profile {
+    .wrapper {
+      margin-top: 0;
+      padding: 0 0 30px 0;
+    }
+  }
+}
+
+.language {
+  .remove-padding-right {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .board {
+    width: 100%;
+    height: calc(50vh);
+    background-color: #000;
+  }
+  .wrapper {
+    > div {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    h3 {
+      text-align: center;
+      padding: 15px;
+      border: 1px solid #000;
+      transition: 1s;
+      cursor: pointer;
+      margin: 0 0 15px 0;
+      margin-right: 15px;
+      margin-left: 0px;
+
+      &:hover {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #000;
+      }
+    }
+    .remove-margin-right {
+      margin-right: 0;
+    }
+    .remove-margin-left {
+      margin-left: 0;
+    }
+  }
+}
+
+// Make it responsive
+@media screen and (max-width: 1199px) {
+  .language {
+    .wrapper {
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .language {
+    .remove-padding-right {
+      padding-left: 0;
+    }
+    .wrapper {
+      > div {
+        h3 {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
