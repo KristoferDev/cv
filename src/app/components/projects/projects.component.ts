@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  projects = ['Todo', 'Personal page', 'CV page', 'Timeapp', 'Biobio'];
+  projects = ['Todo', 'Angular CV', 'React CV', 'Timeapp', 'Biobio', 'Webbshop', 'Cms'];
   data: {};
 
   constructor() {}
@@ -33,6 +33,8 @@ export class ProjectsComponent implements OnInit {
               'Angular',
               'NodeJs',
               'Express',
+              'Api',
+              'Json',
               'Mongodb',
               'Mongoose',
               'Html',
@@ -42,29 +44,27 @@ export class ProjectsComponent implements OnInit {
           };
         }
         break;
-      case 'CV page':
+      case 'React CV':
         if (true) {
           this.data = {
-            title: 'CV page',
+            title: 'React CV',
             textOne:
               "This was an assignment in school while we where doing an react course, It's an small cv page.",
-            textTwo:
-              'I started with making an Node backend Api with mogodb database. Then i used Angular to create a frontend for it.',
             language: ['React', 'Redux', 'Html', 'Css'],
             github: ''
           };
         }
         break;
-      case 'Personal page':
+      case 'Angular CV':
         if (true) {
           this.data = {
-            title: 'CV',
+            title: 'Angular CV',
             textOne:
               'While we had an Angular course in school i also did this page that you are visiting right now',
             textTwo:
               "In it's current state it's just an Angular static page, I might make an api for it in future",
             language: ['Angular', 'html', 'Sass'],
-            github: ''
+            github: 'https://github.com/KristoferDev/cv'
           };
         }
         break;
@@ -73,7 +73,7 @@ export class ProjectsComponent implements OnInit {
           this.data = {
             title: 'Biobio',
             textOne:
-              'This was an assignment in school while we where doing html and css course.',
+              'This was an assignment in school while we where doing an html and css course.',
             textTwo: 'Another static page where i made an fake cinema page',
             language: ['Html', 'Css', 'Js'],
             github: ''
@@ -94,7 +94,35 @@ export class ProjectsComponent implements OnInit {
               'I then also built an app for their payroll administrator where she could handle all the reports,',
             textFive:
               'save them and send a new excel sheet to her mail if she lost any or needed to make any changes.',
+            textSix: 
+              'Unfortunately I dont have access to the code or Images at this point I will see if i can get hold of it.',
             language: ['Php', 'Laravel', 'Sql', 'Html', 'Css', 'Jquery'],
+            github: ''
+          };
+        }
+        break;
+        case 'Webbshop':
+        if (true) {
+          this.data = {
+            title: 'Webbshop',
+            textOne:
+              'This i one of my future projects that I am planing to do.',
+            textTwo: 
+              'More info will come here in the near future',
+            language: ['React', 'Node.js', 'Api', 'Json', 'Mongodb', 'Mongoose', 'Html', 'Css'],
+            github: ''
+          };
+        }
+        break;
+        case 'Cms':
+        if (true) {
+          this.data = {
+            title: 'Cms',
+            textOne:
+              'This i one of my future projects that I am planing to do.',
+            textTwo: 
+              'More info will come here in the near future',
+            language: ['Angular', 'Node.js', 'Api', 'Json', 'Mongodb', 'Mongoose', 'Html', 'Css'],
             github: ''
           };
         }

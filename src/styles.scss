@@ -68,13 +68,17 @@ img {
   .wrapper {
     padding: 25px;
 
-    h2 {
-      font-size: 26px;
-      border: 2px solid #fff;
-      border-radius: 5px;
-      float: left;
-      padding: 6px 12px;
-      margin: 0 20px 20px 0;
+    .languages {
+      display: flex;
+      flex-wrap: wrap;
+
+      h2 {
+        font-size: 26px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        padding: 6px 12px;
+        margin: 0 20px 20px 0;
+      }
     }
 
     form {

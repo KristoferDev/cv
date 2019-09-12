@@ -24,10 +24,13 @@
         <p>{{ data.textOne }}</p>
         <p>
           {{ data.textTwo }}{{ data.textThree }}{{ data.textFour
-          }}{{ data.textFive }}{{ data.textSix }}
+          }}{{ data.textFive }}
+        </p>
+        <p>
+          {{ data.textSix }}
         </p>
         <h3 *ngIf="data.github">
-          Länk till
+          Link for
           <a target="_blank" *ngIf="data.github" href="{{ data.github }}"
             >Github</a
           >
