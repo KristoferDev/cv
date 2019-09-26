@@ -6,16 +6,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  projects = ['Todo', 'Angular CV', 'React CV', 'Timeapp', 'Biobio', 'Webbshop', 'Cms'];
-  data: {};
+  projects = ['Todo', 'Todo server', 'Angular CV', 'Cinema', 'React CV', 'Timeapp', 'Webbshop', 'Cms'];
+  data: {
+    title: string,
+    textOne: string,
+    textTwo: string,
+    textThree: string,
+    textFour: string,
+    textFive: string,
+    language: Array<string>,
+    gitTextOne: string,
+    githubOne: string,
+    image: string
+  };
 
   constructor() {}
 
   ngOnInit() {
     this.data = {
-      title: 'My projects',
-      textOne: 'Here can you see diffrent projects I have made.',
-      language: ''
+      title: 'A selection of my projects.',
+      textOne: '',
+      textTwo: '',
+      textThree: '',
+      textFour: '',
+      textFive: '',
+      language: [],
+      gitTextOne: '',
+      githubOne: '',
+      image: ''
     };
   }
 
@@ -24,34 +42,47 @@ export class ProjectsComponent implements OnInit {
       case 'Todo':
         if (true) {
           this.data = {
-            title: 'Todo project',
+            title: 'Todo Angular',
             textOne:
-              'While we had Angular course in school i decided to do an project to learn more, this resulted in an todo app.',
+              'While we had an Angular course in school, I decided to do a project to learn more, this resulted in a todo app.',
             textTwo:
-              'I started with making an Node backend Api with mogodb database. Then i used Angular to create a frontend for it.',
+              'I started with making a Node backend Api with mogodb database. Then I used Angular to create a front-end for it.',
+            textThree: '',
+            textFour: '',
+            textFive: '',
             language: [
               'Angular',
+              'Html',
+              'Sass', 'Bootstrap'
+            ],
+            gitTextOne: 'Link to ',
+            githubOne: 'https://github.com/KristoferDev/todo',
+            image: 'assets/img/todo.png'
+          };
+        }
+        break;
+        case 'Todo server':
+        if (true) {
+          this.data = {
+            title: 'Todo server',
+            textOne:
+              'While we had an Angular course in school, I decided to do a project to learn more, this resulted in a todo app.',
+            textTwo:
+              'I started with making a Node backend Api with mogodb database. Then I used Angular to create a front-end for it.',
+            textThree: '',
+            textFour: '',
+            textFive: '',
+            language: [
               'NodeJs',
               'Express',
               'Api',
               'Json',
               'Mongodb',
-              'Mongoose',
-              'Html',
-              'Sass'
+              'Mongoose'
             ],
-            github: ['https://github.com/KristoferDev/todo']
-          };
-        }
-        break;
-      case 'React CV':
-        if (true) {
-          this.data = {
-            title: 'React CV',
-            textOne:
-              "This was an assignment in school while we where doing an react course, It's an small cv page.",
-            language: ['React', 'Redux', 'Html', 'Css'],
-            github: ''
+            gitTextOne: 'Link to ',
+            githubOne: 'https://github.com/KristoferDev/todo-server',
+            image: 'assets/img/todo.png'
           };
         }
         break;
@@ -60,23 +91,50 @@ export class ProjectsComponent implements OnInit {
           this.data = {
             title: 'Angular CV',
             textOne:
-              'While we had an Angular course in school i also did this page that you are visiting right now',
+              'While we had an Angular course in school, I also did this page that you are visiting right now.',
             textTwo:
-              "In it's current state it's just an Angular static page, I might make an api for it in future",
-            language: ['Angular', 'html', 'Sass'],
-            github: 'https://github.com/KristoferDev/cv'
+              "In its current state, it's an Angular page.",
+            textThree: '',
+            textFour: '',
+            textFive: '',
+            language: ['Aws', 'Angular', 'Responsive', 'Html', 'Sass', 'Bootstrap'],
+            gitTextOne: 'Link to ',
+            githubOne: 'https://github.com/KristoferDev/cv',
+            image: 'assets/img/angular-cv.png'
           };
         }
         break;
-      case 'Biobio':
+        case 'Cinema':
         if (true) {
           this.data = {
-            title: 'Biobio',
+            title: 'Cinema site',
             textOne:
-              'This was an assignment in school while we where doing an html and css course.',
-            textTwo: 'Another static page where i made an fake cinema page',
+              "This was an assignment in school where we used html/css to build a Cinema site",
+            textTwo: '',
+            textThree: '',
+            textFour: '',
+            textFive: '',
             language: ['Html', 'Css', 'Js'],
-            github: ''
+            gitTextOne: 'Link to ',
+            githubOne: 'https://github.com/KristoferDev/bio',
+            image: 'assets/img/cinema.jpg'
+          };
+        }
+        break;
+        case 'React CV':
+        if (true) {
+          this.data = {
+            title: 'React CV',
+            textOne:
+              "This was an assignment in school while we were doing an reacts course, It's a CV page.",
+            textTwo: '',
+            textThree: '',
+            textFour: '',
+            textFive: '',
+            language: ['React', 'Redux', 'Html', 'Css'],
+            gitTextOne: 'Link to ',
+            githubOne: 'https://github.com/KristoferDev/react-cv',
+            image: 'assets/img/react-cv.png'
           };
         }
         break;
@@ -85,19 +143,19 @@ export class ProjectsComponent implements OnInit {
           this.data = {
             title: 'Timeapp',
             textOne:
-              'This is a project i did back in 2016, it is an App that workers can use to send in their time reports.',
+              'This is a project I did back in 2016, it is an App that workers can use to send in their time reports. ',
             textTwo:
-              'I started with the mobile view where they could fill in their reports one week at a time,',
+              'I started with the mobile view where they could fill in their reports one week at a time, ',
             textThree:
-              'It produced an excel sheet that got sent in an email to their payroll administrator.',
+              'It produced an excel sheet that got sent in an email to their payroll administrator. ',
             textFour:
-              'I then also built an app for their payroll administrator where she could handle all the reports,',
+              'I then also built an app for their payroll administrator where they could handle all their reports, ',
             textFive:
-              'save them and send a new excel sheet to her mail if she lost any or needed to make any changes.',
-            textSix: 
-              'Unfortunately I dont have access to the code or Images at this point I will see if i can get hold of it.',
+              'And send a new excel sheet to their mail if they lost any or needed to make any changes.',
             language: ['Php', 'Laravel', 'Sql', 'Html', 'Css', 'Jquery'],
-            github: ''
+            gitTextOne: 'No github yet.',
+            githubOne: '',
+            image: ''
           };
         }
         break;
@@ -106,11 +164,16 @@ export class ProjectsComponent implements OnInit {
           this.data = {
             title: 'Webbshop',
             textOne:
-              'This i one of my future projects that I am planing to do.',
+              'This is one of my future projects that I am planing to do.',
             textTwo: 
-              'More info will come here in the near future',
-            language: ['React', 'Node.js', 'Api', 'Json', 'Mongodb', 'Mongoose', 'Html', 'Css'],
-            github: ''
+              'More info will come here in the near future.',
+            textThree: '',
+            textFour: '',
+            textFive: '',
+            language: ['Aws', 'React', 'Node.js', 'Api', 'Json', 'Mongodb', 'Mongoose', 'Html', 'Css'],
+            gitTextOne: 'No github yet.',
+            githubOne: '',
+            image: ''
           };
         }
         break;
@@ -119,11 +182,16 @@ export class ProjectsComponent implements OnInit {
           this.data = {
             title: 'Cms',
             textOne:
-              'This i one of my future projects that I am planing to do.',
+              'This is one of my future projects that I am planing to do.',
             textTwo: 
               'More info will come here in the near future',
-            language: ['Angular', 'Node.js', 'Api', 'Json', 'Mongodb', 'Mongoose', 'Html', 'Css'],
-            github: ''
+            textThree: '',
+            textFour: '',
+            textFive: '',
+            language: ['Aws', 'Angular', 'Node.js', 'Api', 'Json', 'Mongodb', 'Mongoose', 'Html', 'Css'],
+            gitTextOne: 'No github yet.',
+            githubOne: '',
+            image: ''
           };
         }
         break;

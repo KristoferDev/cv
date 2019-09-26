@@ -26,16 +26,18 @@
           {{ data.textTwo }}{{ data.textThree }}{{ data.textFour
           }}{{ data.textFive }}
         </p>
-        <p>
-          {{ data.textSix }}
-        </p>
-        <h3 *ngIf="data.github">
-          Link for
-          <a target="_blank" *ngIf="data.github" href="{{ data.github }}"
+        <h3 *ngIf="data.githubOne">
+          {{ data.gitTextOne }}
+          <a target="_blank" href="{{ data.githubOne }}"
             >Github</a
           >
         </h3>
       </div>
+    </div>
+  </div>
+  <div *ngIf="data.image" class="row">
+    <div class="col-md-12">
+      <img src="{{ data.image }}" alt="printscreen of react-cv site">
     </div>
   </div>
 </div>

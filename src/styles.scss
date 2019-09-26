@@ -22,10 +22,21 @@ img {
   margin-bottom: 15px;
 }
 
+@media screen and (max-width: 600px) {
+  body {
+    background-color: #000!important;
+  }
+}
+
 // Nav
 .navbar-inverse {
   background-color: #000 !important;
   color: #fff;
+
+  @media screen and (max-width: 991px) {
+    background-color: rgba(0,0,0,0.8)!important;
+  }
+
   .navbar-brand {
     color: #fff !important;
   }
@@ -40,9 +51,6 @@ img {
   .wrapper {
     margin-top: 60px;
     padding: 60px;
-    a {
-      color: #fff;
-    }
   }
 }
 
@@ -65,8 +73,25 @@ img {
 }
 
 .projects {
+
+  img {
+    max-width: 840px;
+    margin: 0 auto;
+    display: block;
+  }
+
   .wrapper {
     padding: 25px;
+
+    @media screen and (max-width: 991px) {
+      padding-top: 0;
+    }
+
+    h1 {
+      @media screen and (max-width: 991px) {
+        margin-top: 0;
+      } 
+    }
 
     .languages {
       display: flex;
